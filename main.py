@@ -19,28 +19,4 @@ elif page == 'Major League Baseball (MLB)':
     st.table(mlb)
 elif page == 'National Basketball Association (NBA)':
     st.title("NBA Point Spread")
-    st.markdown('''<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>'''
-        , unsafe_allow_html=True)
     st.table(nba)
-
-st.markdown(
-'''
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-body {
-  background-color: coral;
-}
-</style>
-</head>
-<body>
-</body>
-</html>
-'''
-,unsafe_allow_html=True,
-)
