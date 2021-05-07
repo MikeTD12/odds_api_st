@@ -4,11 +4,11 @@ import requests
 from config import *
 from api_key import api_key
 
-sport = 'basketball_nba'
+sport = 'baseball_mlb'
 mkt = 'spreads'
 
 r = requests.get(
-f'{host}/v3/odds/?apiKey={api_key}&sport=baseball_mlb&region={region}&dateFormat={date_format}&oddsFormat={odds_format}&mkt={mkt}',
+f'{host}/v3/odds/?apiKey={api_key}&sport={sport}&region={region}&dateFormat={date_format}&oddsFormat={odds_format}&mkt={mkt}',
     verify=False)
 
 bb = pd.read_json(r.text)

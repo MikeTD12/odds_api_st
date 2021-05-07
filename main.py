@@ -11,12 +11,23 @@ page = st.sidebar.selectbox(
     'What sport do you want to bet on?',
     ("NCAA Men's Basketball", 'Major League Baseball (MLB)', 'National Basketball Association (NBA)')
 )
+
 if page == "NCAA Men's Basketball":
-    st.title("NCAA Men's Basketball Point Spread")
-    st.table(ncaam_bb)
+    if type(ncaam_bb) != str:
+        st.title("NCAA Men's Basketball Point Spread")
+        st.table(ncaam_bb)
+    else:
+        st.markdown("<h4>There are no upcoming Men's NCAA Basketball Games.<h4>", unsafe_allow_html=True)
 elif page == 'Major League Baseball (MLB)':
-    st.title("MLB Point Spread")
-    st.table(mlb)
+    if type(mlb) != str:
+        st.title("MLB Point Spread")
+        st.table(mlb)
+    else:
+        st.markdown("<h4>There are no upcoming Major League Baseball Games.<h4>", unsafe_allow_html=True)
 elif page == 'National Basketball Association (NBA)':
-    st.title("NBA Point Spread")
-    st.table(nba)
+    if type(nba) != str:
+        st.title("NBA Point Spread")
+        st.table(nba)
+    else:
+        st.markdown("<h4>There are no upcoming National Basketball Association Games.<h4>", unsafe_allow_html=True)
+
